@@ -24,6 +24,8 @@ public class Todo {
 
     private LocalDate dueDate = LocalDate.now().plusDays(7);  // 데드라인은 기본값이 존재해야 하는데, 서비스 딴에서 생성하는 것보단 일단 도메인에서 생성하기로 하였습니다.
 
+    private LocalDate createDate = LocalDate.now(); // 생성일자 또한 추가하도록 하자.
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "created_by_id")
     private User createdBy;   // 팀장 구분을 위한 ..

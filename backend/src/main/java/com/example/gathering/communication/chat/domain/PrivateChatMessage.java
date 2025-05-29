@@ -26,7 +26,7 @@ public class PrivateChatMessage {
     private User sender;
 
     @Column(columnDefinition = "TEXT")
-    private String message;
+    private String content;
 
     private LocalDateTime sentAt;
 

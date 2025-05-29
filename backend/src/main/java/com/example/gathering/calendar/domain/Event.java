@@ -1,5 +1,6 @@
 package com.example.gathering.calendar.domain;
 
+import com.example.gathering.project.domain.Project;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,7 +26,7 @@ public class Event {
 
     private LocalDate endDate;
 
-    @ManyToOne(fetch = FetchType.LAZY) // 1개의 캘린더는 여러 개의 이벤트를 가질 수 있습니다 !
-    @JoinColumn(name = "calendar_id")
-    private ProjectCalendar calendar;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "project_id")
+    private Project project;
 }

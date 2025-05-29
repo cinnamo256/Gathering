@@ -1,12 +1,14 @@
 package com.example.gathering.project.domain;
 
-import com.example.gathering.user.domain.User;
+import com.example.gathering.calendar.domain.Event;
 import com.example.gathering.todo.domain.Todo;
+import com.example.gathering.user.domain.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -47,6 +49,8 @@ public class Project {
     )
     private List<User> members;
 
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Event> events = new ArrayList<>();
 
 
 }

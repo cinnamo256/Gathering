@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
 
 @Entity
 @Table(name = "group_chat_room")
@@ -22,6 +23,14 @@ public class GroupChatRoom {
     private Project project;
 
     private LocalDateTime createdAt;
+
+    @ManyToMany
+    @JoinTable(
+            name = "group_chat_room_members",
+            joinColumns = @JoinColumn(name = "chat_room_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    private Set<User> members = new HashSet<>();
 
     @PrePersist
     public void prePersist() {
