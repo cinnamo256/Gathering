@@ -1,16 +1,21 @@
-package com.example.gathering.todo.domain;
+package org.example.gdgprojectbackend.todo.domain;
 
-import com.example.gathering.project.domain.Project;
-import com.example.gathering.user.domain.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.example.gdgprojectbackend.project.domain.Project;
+import org.example.gdgprojectbackend.project.dto.ProjectSimpleResponseDto;
+import org.example.gdgprojectbackend.todo.dto.TodoResponseDto;
+import org.example.gdgprojectbackend.user.domain.User;
+import org.example.gdgprojectbackend.user.dto.UserResponseDto;
 
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "todos")
+@Table(name = "todo")
 @Getter
+@Setter
 @NoArgsConstructor
 public class Todo {
 
@@ -51,4 +56,29 @@ public class Todo {
         }
     }
 
+    public TodoResponseDto toDto() {
+        return new TodoResponseDto(
+                this.getId(),
+                this.getTitle(),
+                this.getDescription(),
+                this.getCreateDate(),
+                this.getDueDate(),
+                this.getStatus().name(),
+                new UserResponseDto(
+                        this.getAssignee().getId(),
+                        this.getAssignee().getUsername(),
+                        this.getAssignee().getEmail(),
+                        this.getAssignee().getProfileImageUrl(),
+                        this.getAssignee().getPhoneNumber()
+                ),
+                new UserResponseDto(
+                        this.getAssignee().getId(),
+                        this.getAssignee().getUsername(),
+                        this.getAssignee().getEmail(),
+                        this.getAssignee().getProfileImageUrl(),
+                        this.getAssignee().getPhoneNumber()
+                ),
+                ProjectSimpleResponseDto.from(this.getProject())
+        );
+    }
 }
