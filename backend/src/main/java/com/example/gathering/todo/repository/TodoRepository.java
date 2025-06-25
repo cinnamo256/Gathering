@@ -1,6 +1,6 @@
-package org.example.gdgprojectbackend.todo.repository;
+package com.example.gathering.todo.repository;
 
-import org.example.gdgprojectbackend.todo.domain.Todo;
+import com.example.gathering.todo.domain.Todo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,11 +1,10 @@
-package org.example.gdgprojectbackend.todo.dto;
+package com.example.gathering.todo.dto;
 
+import com.example.gathering.project.dto.ProjectSimpleResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.gdgprojectbackend.project.dto.ProjectSimpleResponseDto;
-import org.example.gdgprojectbackend.user.dto.UserResponseDto;
-
+import com.example.gathering.user.dto.UserResponseDto;
 import java.time.LocalDate;
 
 @Data

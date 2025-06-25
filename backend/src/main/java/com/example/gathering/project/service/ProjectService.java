@@ -41,6 +41,7 @@ public class ProjectService {
     // 존재하는 모든 프로젝트들을 조회함.
     public List<ProjectSimpleResponseDto> getAllProjects() {
         List<Project> projects = projectRepository.findAll();
+        System.out.println(projects);
 
         return projects.stream()
                 .map(ProjectSimpleResponseDto::from)

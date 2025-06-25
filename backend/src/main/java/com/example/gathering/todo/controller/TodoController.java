@@ -1,12 +1,12 @@
-package org.example.gdgprojectbackend.todo.controller;
+package com.example.gathering.todo.controller;
 
+import com.example.gathering.todo.domain.TodoStatus;
+import com.example.gathering.todo.dto.TodoAssignDto;
+import com.example.gathering.todo.dto.TodoRequestDto;
+import com.example.gathering.todo.dto.TodoResponseDto;
+import com.example.gathering.todo.dto.TodoUpdateDto;
+import com.example.gathering.todo.service.TodoService;
 import lombok.RequiredArgsConstructor;
-import org.example.gdgprojectbackend.todo.domain.TodoStatus;
-import org.example.gdgprojectbackend.todo.dto.TodoAssignDto;
-import org.example.gdgprojectbackend.todo.dto.TodoRequestDto;
-import org.example.gdgprojectbackend.todo.dto.TodoResponseDto;
-import org.example.gdgprojectbackend.todo.dto.TodoUpdateDto;
-import org.example.gdgprojectbackend.todo.service.TodoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

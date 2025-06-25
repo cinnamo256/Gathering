@@ -1,16 +1,16 @@
-package org.example.gdgprojectbackend.todo.service;
+package com.example.gathering.todo.service;
 
+import com.example.gathering.project.domain.Project;
+import com.example.gathering.project.repository.ProjectRepository;
+import com.example.gathering.todo.domain.Todo;
+import com.example.gathering.todo.domain.TodoStatus;
+import com.example.gathering.todo.dto.TodoRequestDto;
+import com.example.gathering.todo.dto.TodoResponseDto;
+import com.example.gathering.todo.dto.TodoUpdateDto;
+import com.example.gathering.todo.repository.TodoRepository;
+import com.example.gathering.user.domain.User;
+import com.example.gathering.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.example.gdgprojectbackend.project.domain.Project;
-import org.example.gdgprojectbackend.project.repository.ProjectRepository;
-import org.example.gdgprojectbackend.todo.domain.Todo;
-import org.example.gdgprojectbackend.todo.domain.TodoStatus;
-import org.example.gdgprojectbackend.todo.dto.TodoRequestDto;
-import org.example.gdgprojectbackend.todo.dto.TodoResponseDto;
-import org.example.gdgprojectbackend.todo.dto.TodoUpdateDto;
-import org.example.gdgprojectbackend.todo.repository.TodoRepository;
-import org.example.gdgprojectbackend.user.domain.User;
-import org.example.gdgprojectbackend.user.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

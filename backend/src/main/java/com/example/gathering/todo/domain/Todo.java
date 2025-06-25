@@ -1,14 +1,14 @@
-package org.example.gdgprojectbackend.todo.domain;
+package com.example.gathering.todo.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.example.gdgprojectbackend.project.domain.Project;
-import org.example.gdgprojectbackend.project.dto.ProjectSimpleResponseDto;
-import org.example.gdgprojectbackend.todo.dto.TodoResponseDto;
-import org.example.gdgprojectbackend.user.domain.User;
-import org.example.gdgprojectbackend.user.dto.UserResponseDto;
+import com.example.gathering.user.domain.User;
+import com.example.gathering.project.domain.Project;
+import com.example.gathering.todo.dto.*;
+import com.example.gathering.user.dto.*;
+import com.example.gathering.project.dto.*;
 
 import java.time.LocalDate;
 

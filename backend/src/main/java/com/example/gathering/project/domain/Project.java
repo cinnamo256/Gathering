@@ -13,7 +13,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 @Entity
-@Table(name = "projects")
+@Table(name = "project")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor

@@ -1,9 +1,8 @@
-package org.example.gdgprojectbackend.todo.domain;
+package com.example.gathering.todo.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.example.gdgprojectbackend.project.domain.Project;
 
 import java.time.LocalDate;
 

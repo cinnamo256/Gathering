@@ -1,4 +1,4 @@
-package org.example.gdgprojectbackend.todo.dto;
+package com.example.gathering.todo.dto;
 
 import lombok.Getter;
 import lombok.Setter;

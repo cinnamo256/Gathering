@@ -1,8 +1,8 @@
-package org.example.gdgprojectbackend.todo.dto;
+package com.example.gathering.todo.dto;
 
+import com.example.gathering.todo.domain.TodoStatus;
 import lombok.Getter;
 import lombok.Setter;
-import org.example.gdgprojectbackend.todo.domain.TodoStatus;
 
 import java.time.LocalDate;
 
