@@ -1,5 +1,11 @@
-package com.example.gathering.todo.domain;
+package org.example.gdgprojectbackend.todo.domain;
 
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.example.gdgprojectbackend.project.domain.Project;
+
+import java.time.LocalDate;
 
 public enum TodoStatus {
     PENDING,             // 할당만 된 상태

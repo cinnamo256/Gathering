@@ -1,12 +1,14 @@
 package com.example.gathering.communication.chat.domain;
 
 import com.example.gathering.project.domain.Project;
+import com.example.gathering.user.domain.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "group_chat_room")
